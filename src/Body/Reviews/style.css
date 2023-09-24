@@ -1,0 +1,186 @@
+/* style.css */
+
+.reviews {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-image: url(/Img1.webp);
+  background-position: center;
+  background-size: cover;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.reviews::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #84e094;
+  opacity: 0.5;
+}
+
+.slide-container {
+  padding: 40px;
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  width: 100%; /* Set a fixed width */
+  white-space: nowrap; /* Prevent text wrapping */
+  scroll-behavior: smooth; /* Add smooth scrolling behavior */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+  z-index: 1;
+}
+
+/* Hide scrollbar in Webkit (Chrome, Safari) */
+.slide-container::-webkit-scrollbar {
+  display: none;
+}
+.slide-content {
+  flex: 0 0 auto;
+  margin: 0 10px;
+  background-color: transparent; /* Set the background color to transparent */
+  white-space: normal; /* Reset white-space property */
+  display: inline-block; /* Make each item inline-block */
+  vertical-align: top; /* Align items to the top */
+}
+
+.card {
+  width: 320px;
+  border-radius: 25px;
+  background-color: #fff;
+  height: auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 3px;
+}
+
+.image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+
+.image-content {
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #298939;
+  border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before,
+.overlay::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #298939;
+}
+
+.overlay::after {
+  border-radius: 0 25px 0 0;
+  background-color: #fff;
+}
+
+.card-image .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #c1f440;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.comment {
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis (...) for long comments */
+  max-height: 80px; /* Limit maximum height of comments */
+  margin-bottom: 10px; /* Add margin to separate comment and button */
+}
+
+.button {
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  padding: 8px 16px;
+  background-color: #36ba4c;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: #086858;
+}
+
+
+@media only screen and (min-width: 769px) {
+  .swiper-slide:first-child {
+    transition: transform 100ms;
+  }
+
+  .swiper-slide:first-child img {
+    transition: box-shadow 500ms;
+  }
+
+  .swiper-slide.swiper-slide-active:first-child {
+    transform: translateX(50%);
+    z-index: 2;
+  }
+
+  .swiper-slide.swiper-slide-active:first-child img {
+    box-shadow: 0px 32px 80px rgba(0, 0, 0, 0.35);
+  }
+
+  .swiper-slide:nth-child(2) {
+    transition: transform 100ms;
+  }
+
+  .swiper-slide.swiper-slide-next:nth-child(2) {
+    transform: translateX(55%);
+    z-index: 1;
+  }
+
+  .swiper[dir="rtl"] .swiper-slide.swiper-slide-active:first-child {
+    transform: translateX(-50%);
+  }
+
+  .swiper[dir="rtl"] .swiper-slide.swiper-slide-next:nth-child(2) {
+    transform: translateX(-55%);
+  }
+}

@@ -1,0 +1,60 @@
+/* Container for social icons */
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px #ff33d6;
+}
+.social-title{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/* Individual social icon */
+.socials-icon {
+  font-size: px;
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  transition: transform 0.3s ease, color 0.3s ease; /* Add smooth transitions */
+}
+
+/* Hover effect */
+.socials-icon:hover {
+  color: #ff33d3; /* Change the icon color on hover */
+  transform: scale(1.2); /* Increase the size by 20% on hover */
+  cursor: pointer;
+}
+
+.contact{
+    margin: 5px 0px;
+}
+.contact span{
+    border: 1px solid #a51686f0;
+    padding: 5px 10px;
+}
+.contact i{
+    color: #a51686f0;
+    
+}
+.contact i:hover{
+  transition: transform 0.3s ease, color 0.3s ease; /* Add smooth transitions */
+   transform: scale(1.2); /* Increase the size by 20% on hover */
+    cursor: pointer;
+
+}
+.contact .appointment{
+   padding: 5px 10px;
+   background: #a51686f0;
+   color: #fff;
+   transition: transform 0.3s ease, color 0.3s ease; /* Add smooth transitions */
+
+
+}
+.appointment:hover{
+    transform: scale(1.2); /* Increase the size by 20% on hover */
+    cursor: pointer;
+}

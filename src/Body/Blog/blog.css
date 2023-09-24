@@ -1,0 +1,72 @@
+/* blog.css */
+
+.blog-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.blog {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 0;
+}
+
+/* Add any additional styles you need */
+.bg-blue-900 {
+  background-color: #007bff; /* Replace with your desired background color */
+}
+
+.btn{
+  padding: 0.8rem;
+  margin-top:0.5rem;
+  background-image: linear-gradient(to bottom right, orange, green, yellow);
+  color: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+}
+.btn:hover{
+  transition: all 1s ease;
+  background-image: linear-gradient(to bottom right, green, yellow, red);
+}
+
+
+.search{
+  height: 4rem;
+  width:90% ;
+  margin: 0 auto;
+}
+
+.side-container{
+  width: 80%;
+  margin: 0 auto;
+}
+.side-container ul > li::before {
+  content: "\2022";
+  color: #11ef45;
+  display: inline-block;
+  width: 10px;
+}
+
+.bullet-point {
+  font-size: 40px;
+}
+
+.blog-details{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.blog-details .details{
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 0;
+}
+
+@media (max-width: 900px) {
+  .blog{
+    display: block;
+  }
+  .blog-details .details{
+    display: block;
+  }
+}

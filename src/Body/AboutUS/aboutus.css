@@ -1,0 +1,32 @@
+.experience{
+    width: 60%;
+    margin: 0 auto;
+}
+.experience svg{
+background: rgb(72, 183, 72);
+border-radius: 60px;
+color: white;
+/* font-size: 18px; */
+padding: 3px;
+}
+
+.orgpreview{
+  background-image: linear-gradient(to bottom right,green, rgba(4, 74, 4, 0.416), rgba(30, 83, 23, 0.594));
+  padding: 3rem;
+
+}
+
+.orgpreview svg{
+    font-size: 40px;
+}
+
+.nanniesworld{
+    background-image: url("Img1.webp");
+    background-position-x: left;
+    background-size: 50%;
+    background-blend-mode: luminosity;
+}
+
+.nanniesworld .contact-box:hover{
+transform: rotatey(180deg);
+}
