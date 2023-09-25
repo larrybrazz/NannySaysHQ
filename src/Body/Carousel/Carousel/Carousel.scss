@@ -5,7 +5,8 @@
 }
 
 .description-container {
-  width: 600px;
+  display: inline-block;
+  width: 100%;
   text-align: center;
   padding: 20px 0;
   color: aliceblue;
@@ -27,6 +28,7 @@
     font-size: 1.9rem;
     margin: 1rem 0;
     font-weight: 500;
+    text-align: center;
     color: orange;
 
     &.active {
@@ -44,7 +46,7 @@
     &.active {
       animation: slide-left 2.1s ease;
     }
-    
+
     .text-btn:hover{
         background-color: antiquewhite;
         color: aqua;
@@ -122,4 +124,21 @@
   100% {
     opacity: 1;
   }
+}
+
+@media (max-width:900px) {
+    .description-container{
+        .text-up{
+            font-size: 1.6rem;
+            padding: 0 .8rem;
+        }
+        .text-right{
+            font-size: 1rem;
+            padding: 0 .8rem;
+        }
+        .text-btn{
+            font-size: 1rem;
+            padding: 0 .8rem;
+        }
+    }
 }
